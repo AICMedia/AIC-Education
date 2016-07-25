@@ -13,7 +13,7 @@ const gulp = require('gulp'),
 const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
 
 gulp.task('styles', function () {
-	return gulp.src('src/sass/main.scss')
+	return gulp.src('src/sass/{main,onescreen1,onescreen2}.scss')
 		.pipe(gulpIf(isDevelopment, sourcemaps.init()))
 		.pipe(sass().on('error', sass.logError))
 		.pipe(autoprefixer())
@@ -40,7 +40,7 @@ gulp.task('assets', function() {
 });
 
 gulp.task('js', function() {
-	return gulp.src('src/js/{main,vendor}.js', {since: gulp.lastRun('js')})
+	return gulp.src('src/js/{main,vendor,onescreen1,onescreen2}.js', {since: gulp.lastRun('js')})
 		.pipe(rigger())
 		.pipe(gulp.dest('build/js/'));
 });

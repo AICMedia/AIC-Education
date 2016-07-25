@@ -181,8 +181,6 @@ $(document).on('ready', function() {
                 }, $this.data("animation-delay") || 0)
             }
         });
-
-
     }
 
     function counterIncrement($els, time){

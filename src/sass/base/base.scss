@@ -1398,13 +1398,17 @@ A:active {
   margin-bottom: 80px;
 }
 
+.b-total {
+  margin-bottom: 65px;
+}
+
 .b-total LI.active {
   @include fromBottomActive;
 }
 
 .b-total LI {
   padding-left: 40px;
-  margin-bottom: 34px;
+  margin-bottom: 30px;
   position: relative;
   @include fromBottom;
 }
