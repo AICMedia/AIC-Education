@@ -1,0 +1,33 @@
+{
+  "name": "aiceducation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp",
+    "dev": "NODE_ENV=development& npm run gulp dev",
+    "build": "NODE_ENV=production& gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "",
+  "dependencies": {
+    "bower": "^1.7.9",
+    "del": "^2.2.0",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-if": "^2.0.1",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^2.3.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "jump.js": "^1.0.1"
+  },
+  "devDependencies": {},
+  "description": ""
+}

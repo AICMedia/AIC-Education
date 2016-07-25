@@ -1,0 +1,69 @@
+$font-family-opensans: "Open Sans", sans-serif;
+$font-family-georgia: "Georgia", sans-serif;
+$font-family-sfui: "SF UI Text", sans-serif;
+
+$color-white: #fff;
+$color-black: #000;
+$color-blue: rgb(32, 104, 251);
+$color-ping: rgb(164, 0, 255);
+$color-grey-light: rgb(214, 217, 222);
+$color-grey-medium: rgb(159, 167, 180);
+$color-grey-dark-op: rgba(34, 34, 34, 0.7);
+
+$fcolor-h1: $color-white;
+$fcolor-big-number: $color-grey-light;
+$fcolor-h2: $color-black;
+$fcolor-h3: $color-grey-medium;
+$fcolor-header: $color-black;
+$fcolor-main: $color-grey-dark-op;
+$fcolor-main-italic: $color-grey-medium;
+$fcolor-button: $color-blue;
+
+
+$fsize-h1: 100px;
+$fsize-big-number: 150px;
+$fsize-h2: 38px;
+$fsize-h3: 24px;
+$fsize-header: 15px;
+$fsize-main: 16px;
+$fsize-main-italic: 18px;
+$fsize-button: 15px;
+
+$fheight-h1: 1;
+$fheight-big-number: 1;
+$fheight-h2: 1;
+$fheight-h3: 40px;
+$fheight-header: 21px;
+$fheight-main: 26px;
+$fheight-main-italic: 28px;
+$fheight-button: 1;
+
+$ffamily-h1: $font-family-opensans;
+$ffamily-big-number: $font-family-georgia;
+$ffamily-h2: $font-family-opensans;
+$ffamily-h3: $font-family-georgia;
+$ffamily-header: $font-family-sfui;
+$ffamily-main: $font-family-sfui;
+$ffamily-main-italic: $font-family-georgia;
+$ffamily-button: $font-family-sfui;
+
+$fweight-h1: bold;
+$fweight-big-number: normal;
+$fweight-h2: 300;
+$fweight-h3: normal;
+$fweight-header: bold;
+$fweight-main: normal;
+$fweight-main-italic: normal;
+$fweight-button: bold;
+
+$fstyle-h1: normal;
+$fstyle-big-number: italic;
+$fstyle-h2: normal;
+$fstyle-h3: italic;
+$fstyle-header: normal;
+$fstyle-main: normal;
+$fstyle-main-italic: italic;
+$fstyle-button: normal;
+
+
+

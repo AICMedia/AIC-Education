@@ -1,0 +1,72 @@
+
+.b-form {
+  border: 1px solid #dfe4ed;
+  border-radius: 3px;
+  padding: 55px;
+}
+
+.b-form H2 {
+  margin-bottom: 30px;
+  letter-spacing: -2px;
+}
+
+.b-form input[type="text"] {
+  height: 62px;
+  padding: 25px 30px;
+  border: 1px solid #dfe4ed;
+  margin-bottom: 30px;
+  font-size: 15px;
+  width: 100%;
+  border-radius: 3px;
+  outline: none;
+}
+
+.b-form label {
+  @include f-main;
+  display: inline-block;
+}
+
+.b-form input[type="checkbox"] {
+  display: none;
+}
+
+.b-form input[type="checkbox"] + label {
+  padding-left: 40px;
+  position: relative;
+}
+
+.b-form input[type="checkbox"] + label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  background: url('../images/screen-11/checkbox.png');
+}
+
+.b-form input[type="checkbox"]:checked + label::before {
+  background: url('../images/screen-11/checkbox-checked.jpg');
+
+}
+
+.b-input_cover {
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.b-form .b-consultation input {
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.b-input_cover.n1 {
+  padding-right: 10px;
+  margin-bottom: 0;
+}
+
+.b-input_cover.n2 {
+  padding-left: 10px;
+  margin-bottom: 0;
+}

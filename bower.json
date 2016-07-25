@@ -1,0 +1,30 @@
+{
+  "name": "podrujkajuly",
+  "description": "",
+  "main": "index.js",
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/vendor/bower_components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.2",
+    "jquery": "2.2.4",
+    "slick-carousel": "slick.js#^1.6.0",
+    "bootstrap-sass": "^3.3.6",
+    "letteringjs": "Lettering.js#^0.7.0",
+    "textillate": "^0.4.0",
+    "animate.css": "^3.5.2",
+    "animate-sass": "^0.6.6",
+    "jquery.scrollTo": "^2.1.2",
+    "force-js": "^0.1.1"
+  },
+  "resolutions": {
+    "jquery": "2.2.4"
+  }
+}

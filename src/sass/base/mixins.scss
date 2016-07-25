@@ -1,0 +1,114 @@
+@mixin f-h1() {
+  font-family: $ffamily-h1;
+  font-size: $fsize-h1;
+  line-height: $fheight-h1;
+  font-weight: $fweight-h1;
+  font-style: $fstyle-h1;
+  color: $fcolor-h1;
+}
+
+@mixin f-h2() {
+  font-family: $ffamily-h2;
+  font-size: $fsize-h2;
+  line-height: $fheight-h2;
+  font-weight: $fweight-h2;
+  font-style: $fstyle-h2;
+  color: $fcolor-h2;
+}
+
+@mixin f-h3() {
+  font-family: $ffamily-h3;
+  font-size: $fsize-h3;
+  line-height: $fheight-h3;
+  font-weight: $fweight-h3;
+  font-style: $fstyle-h3;
+  color: $fcolor-h3;
+}
+
+@mixin f-big-number() {
+  font-family: $ffamily-big-number;
+  font-size: $fsize-big-number;
+  line-height: $fheight-big-number;
+  font-weight: $fweight-big-number;
+  font-style: $fstyle-big-number;
+  color: $fcolor-big-number;
+}
+
+@mixin f-header() {
+  font-family: $ffamily-header;
+  font-size: $fsize-header;
+  line-height: $fheight-header;
+  font-weight: $fweight-header;
+  font-style: $fstyle-header;
+  color: $fcolor-header;
+  text-transform: uppercase;
+}
+
+@mixin f-main() {
+  font-family: $ffamily-main;
+  font-size: $fsize-main;
+  line-height: $fheight-main;
+  font-weight: $fweight-main;
+  font-style: $fstyle-main;
+  color: $fcolor-main;
+}
+
+@mixin f-main-italic() {
+  font-family: $ffamily-main-italic;
+  font-size: $fsize-main-italic;
+  line-height: $fheight-main-italic;
+  font-weight: $fweight-main-italic;
+  font-style: $fstyle-main-italic;
+  color: $fcolor-main-italic;
+}
+
+@mixin f-button() {
+  font-family: $ffamily-button;
+  font-size: $fsize-button;
+  line-height: $fheight-button;
+  font-weight: $fweight-button;
+  font-style: $fstyle-button;
+  color: $fcolor-button;
+}
+
+
+@mixin pseudo {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+
+@mixin fromBottomActive() {
+  opacity: 1;
+  top: 0;
+}
+
+@mixin fromBottom() {
+  transition: all 1s;
+  position: relative;
+  top: 50px;
+  opacity: 0;
+}
+
+@mixin opacityActive() {
+  opacity: 1;
+}
+
+@mixin opacitySet() {
+  opacity: 0;
+  transition: all 1s;
+  transition-timing-function: ease-in-out;
+}
+
+@mixin scaleActive() {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@mixin scaleSet(){
+  opacity: 0;
+  transition: all 1s;
+  transition-timing-function: ease-in-out;
+  transform: scale(0);
+}
