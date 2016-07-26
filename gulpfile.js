@@ -8,7 +8,9 @@ const gulp = require('gulp'),
 	  cssnano = require('gulp-cssnano'),
 	  imagemin = require('gulp-imagemin'),
 	  rigger = require('gulp-rigger'),
-	  autoprefixer = require('gulp-autoprefixer');
+	  autoprefixer = require('gulp-autoprefixer'),
+	  tinify = require('gulp-tinify');
+
 
 const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
 
@@ -24,7 +26,7 @@ gulp.task('styles', function () {
 
 gulp.task('images', function() {
 	return gulp.src('src/images/**/*.*', {since: gulp.lastRun('images')})
-		.pipe(gulpIf(!isDevelopment, imagemin()))
+		.pipe(gulpIf(!isDevelopment, tinify("Meww1Gk1lzvga6pnOTubytyD6WA-8-oQ")))
 		.pipe(gulp.dest('build/images/'));
 });
 

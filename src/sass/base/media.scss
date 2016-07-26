@@ -26,11 +26,20 @@
   .b-screen-1 .b-target_list {
     margin-bottom: 180px;
   }
+
+  .b-video {
+    width: 850px;
+    height: 482px;
+  }
 }
 
 
 
 @media (max-width: 991px) {
+  .b-video {
+    width: 650px;
+    height: 362px;
+  }
   .b-teacher_premium .b-teacher_cover:nth-child(3) {
     border: 1px solid #9fa7b4;
     border-right: none;
@@ -185,6 +194,10 @@
     font-size: 30px;
   }
 
+  .b-video {
+    width: 380px;
+    height: 210px;
+  }
 
   .b-screen_top_logo {
     font-size: 50px;
@@ -525,7 +538,7 @@
     font-size: 60px;
   }
 
-  .b-form {
+  .b-order_cover {
     padding: 20px;
   }
 
@@ -582,7 +595,7 @@
     padding: 70px 0 140px;
   }
 
-  .b-screen-13 .b-form {
+  .b-screen-13 .b-order_cover {
     padding: 40px 20px;
   }
 
@@ -596,6 +609,11 @@
 @media (max-width: 480px) {
   .b-screen_top_content {
     transform: translateY(-40%);
+  }
+
+  .b-video {
+    width: 260px;
+    height: 150px;
   }
 
 }
@@ -630,13 +648,20 @@
     z-index: 11;
   }
 
+  .b-video {
+    width: 850px;
+    height: 482px;
+  }
 
+  .b-target_list_popup .col-lg-6 > DIV {
+    min-height: 605px;
+  }
 
   .b-popup_content {
     border: transparent;
   }
 
-  .b-target_list_popup .b-form {
+  .b-target_list_popup .b-order_cover {
     border: transparent;
     border-left: 1px solid #dfe4ed;
   }

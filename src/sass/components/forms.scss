@@ -1,5 +1,5 @@
 
-.b-form {
+.b-order_cover {
   border-radius: 3px;
   padding: 55px;
   border: 1px solid #9e9393;
@@ -82,4 +82,28 @@
 .b-input_cover.n2 {
   padding-left: 10px;
   margin-bottom: 0;
+}
+
+.b-order_cover.m-success .b-order_success {
+  opacity: 1;
+  display: block;
+}
+
+.b-order_cover.m-success .b-form {
+  display: none;
+}
+
+.b-order_success {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.8s;
+}
+
+.b-order_cover .b-order_success H2 {
+  margin-bottom: 30px;
+}
+
+
+.b-order_success P {
+  @include f-h3;
 }
