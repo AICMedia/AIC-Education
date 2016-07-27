@@ -317,7 +317,9 @@ A:active {
   margin-bottom: 50px;
 }
 
-
+.b-screen-1 .b-consult {
+  margin-top: 20px;
+}
 
 .b-screen-1 .b-target_list {
   margin-bottom: 260px;
@@ -828,15 +830,47 @@ A:active {
 }
 
 .b-career.n1 {
-  background: url('../images/screen-5/b-1.png') top 50px center no-repeat;
+  position: relative;
+  //background: url('../images/screen-5/b-1.png') top 50px center no-repeat;
 }
 
+.b-career.n1::after {
+  @include pseudo;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url('../images/screen-5/4.svg');
+  width: 59px;
+  height: 34px;
+}
+
+.b-career.n2::after {
+  @include pseudo;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url('../images/screen-5/5.svg');
+  width: 47px;
+  height: 53px;
+}
+
+.b-career.n3::after {
+  @include pseudo;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url('../images/screen-5/6.svg');
+  width: 48px;
+  height: 48px;
+}
 .b-career.n2 {
-  background: url('../images/screen-5/b-2.png') top 50px center no-repeat;
+  position: relative;
+  //background: url('../images/screen-5/b-2.png') top 50px center no-repeat;
 }
 
 .b-career.n3 {
-  background: url('../images/screen-5/b-3.png') top 50px center no-repeat;
+  position: relative;
+  //background: url('../images/screen-5/b-3.png') top 50px center no-repeat;
   background-color: #5c49f3;
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3)
 }
@@ -872,7 +906,7 @@ A:active {
 }
 
 .b-teacher_premium .b-teacher_cover {
-  border: 1px solid $color-grey-medium;
+  border: 1px solid $color-grey-light;
   background-color: $color-white;
   margin-top: -1px;
 }
@@ -887,7 +921,7 @@ A:active {
 }
 
 .b-teacher_cover.n3.active {
-  border: 1px solid #9fa7b4;
+  border: 1px solid $color-grey-light;
   transform: translateX(0px);
 }
 
@@ -979,13 +1013,13 @@ A:active {
 }
 
 .b-teacher_common {
-  border: 1px solid $color-grey-medium;
+  border: 1px solid $color-grey-light;
   border-bottom-color: transparent;
   margin-bottom: 60px;
 }
 
 .b-teacher_common .b-teacher_cover {
-  border-bottom: 1px solid $color-grey-medium;
+  border-bottom: 1px solid $color-grey-light;
 }
 
 .b-screen-6 .b-btn_look_more_cover {

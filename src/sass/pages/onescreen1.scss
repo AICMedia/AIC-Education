@@ -302,7 +302,6 @@ A:active {
   padding: 21px 50px;
 }
 
-
 .b-cover_bottom input[type="text"] {
   height: 60px;
   padding: 25px 30px;
@@ -313,10 +312,50 @@ A:active {
   outline: none;
   color: $color-white;
   width: 240px;
+  transition: all 0.8s;
 }
 
-.b-cover_bottom input[type="text"] + .b-btn {
+.b-cover_bottom .b-input_text_cover + .b-btn {
   margin-left: 30px;
+}
+
+.b-input_text_cover.m-invalid input[type="text"] {
+  border-color: #ef1616;
+}
+
+.b-input_hint {
+  position: absolute;
+  bottom: -18px;
+  @include f-main;
+  font-size: 12px;
+  opacity: 0;
+  transition: all 0.8s;
+  line-height: 12px;
+  color: #b6b6b6;
+}
+
+.b-input_text_cover {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.b-input_text_cover.m-invalid::after {
+  @include pseudo;
+  right: -25px;
+  top: 50%;
+  margin-top: -9px;
+  width: 18px;
+  height: 18px;
+  background: url("../images/hint.png");
+}
+
+.b-input_text_cover.m-invalid .b-input_hint {
+  opacity: 1;
+}
+
+form input[type="text"]:focus {
+  border-color: $color-blue;
 }
 
 .b-header_text {
@@ -400,4 +439,18 @@ A:active {
   top: 0;
   left: 0;
   overflow: hidden;
+}
+
+#b-showreel .r-clip IFRAME {
+  opacity: 0.5;
+}
+
+#b-showreel .r-clip::before {
+  @include pseudo;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: url("../images/onescreen/bg-purple.png");
+  background-size: cover;
 }

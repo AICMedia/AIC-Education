@@ -5,8 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "gulp": "gulp",
-    "dev": "NODE_ENV=development npm run gulp dev",
-    "build": "NODE_ENV=production gulp build"
+    "dev": "set NODE_ENV=development& npm run gulp dev",
+    "build": "set NODE_ENV=production& gulp build"
   },
   "repository": {
     "type": "git",

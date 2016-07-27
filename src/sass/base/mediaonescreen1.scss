@@ -695,7 +695,11 @@
     display: none;
   }
 
-  .b-cover_bottom input[type="text"] + .b-btn {
+  .b-input_text_cover {
+    display: none;
+  }
+
+  .b-cover_bottom .b-input_text_cover + .b-btn {
     margin-left: 0;
   }
 

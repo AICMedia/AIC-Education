@@ -41,7 +41,7 @@
     height: 362px;
   }
   .b-teacher_premium .b-teacher_cover:nth-child(3) {
-    border: 1px solid #9fa7b4;
+    border: 1px solid $color-grey-light;
     border-right: none;
   }
 
@@ -386,7 +386,7 @@
   }
 
   .b-teacher {
-    border: 1px solid #9fa7b4;
+    border: 1px solid $color-grey-light;
     margin-top: -1px;
     min-height: initial;
   }
@@ -600,6 +600,10 @@
   }
 
   .b-screen-6 .b-cover.n2 {
+    display: none;
+  }
+
+  .b-input_text_cover.m-invalid::after {
     display: none;
   }
 

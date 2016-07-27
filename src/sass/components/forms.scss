@@ -14,11 +14,48 @@
   height: 62px;
   padding: 25px 30px;
   border: 1px solid #9e9393;
-  margin-bottom: 30px;
   font-size: 15px;
   width: 100%;
   border-radius: 3px;
   outline: none;
+  transition: all 1s;
+}
+
+.b-form .b-input_text_cover.m-invalid input[type="text"] {
+  border-color: #ef1616;
+}
+
+.b-input_hint {
+  position: absolute;
+  bottom: -18px;
+  @include f-main;
+  font-size: 12px;
+  opacity: 0;
+  transition: all 0.8s;
+  line-height: 12px;
+}
+
+.b-input_text_cover {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.b-input_text_cover.m-invalid::after {
+  @include pseudo;
+  right: -25px;
+  top: 50%;
+  margin-top: -9px;
+  width: 18px;
+  height: 18px;
+  background: url("../images/hint.png");
+}
+
+.b-input_text_cover.m-invalid .b-input_hint {
+  opacity: 1;
+}
+
+.b-form input[type="text"]:focus {
+  border-color: $color-blue;
 }
 
 ::-webkit-input-placeholder {

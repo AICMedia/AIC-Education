@@ -83,7 +83,14 @@ $(document).on('ready', function() {
     })
 
 
+    $(function() {
+        var vimeo_iframe = $('iframe')[0];
+        var player = $f(vimeo_iframe);
 
+        player.addEvent('ready', function() {
+            player.api('setVolume', 0);
+        });
+    });
     var animation = {
 
         counter: function(){
