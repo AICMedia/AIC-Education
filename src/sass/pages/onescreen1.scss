@@ -442,7 +442,7 @@ form input[type="text"]:focus {
 }
 
 #b-showreel .r-clip IFRAME {
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 #b-showreel .r-clip::before {
@@ -452,5 +452,28 @@ form input[type="text"]:focus {
   right: 0;
   height: 100%;
   background: url("../images/onescreen/bg-purple.png");
+  background-size: cover;
+}
+
+#b-showreel_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.r-clip_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.b-screen_top_body {
+  background: url("../images/onescreen/bg-purple.png"), rgba(0, 0, 50, 0.6);
   background-size: cover;
 }

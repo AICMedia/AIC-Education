@@ -385,15 +385,6 @@ var animation = {
     }
 };
 
-try {
-    $.browserSelector();
-    if($("html").hasClass("chrome")) {
-        $.smoothScroll();
-    }
-} catch(err) {
-
-}
-
 animateElements ();
 
 $(document).on("scroll", animateElements);

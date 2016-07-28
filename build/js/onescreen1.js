@@ -427,11 +427,11 @@ $(document).ready(function(){
     }
 
     $(window).on("resize", function(){
-        $(".r-clip").css({width: $(window).width(), height: $(window).height()});
-    })
+        $(".r-clip, .r-clip_bg").css({width: $(window).width(), height: $(window).height()});
+    });
 
     $(".b-btn_play").on("click", function(){
-        $(".r-clip").html('<iframe frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" src="https://player.vimeo.com/video/168717539?title=0&byline=0&portrait=0&autoplay=1" width="150%" height="150%" style="transform: translateX(-17%) translateY(-16%);"></iframe>')
+        $(".r-clip").html('<iframe frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" src="https://player.vimeo.com/video/176429692?title=0&byline=0&portrait=0&autoplay=1" width="150%" height="150%" style="transform: translateX(-17%) translateY(-16%);"></iframe>')
         $(".r-clip").css({width: $(window).width(), height: $(window).height()});
         $("#b-showreel").addClass("m-show")
         return false;
@@ -444,3 +444,12 @@ $(document).ready(function(){
         $("#b-showreel").removeClass("m-show")
     })
 })
+
+$(function() {
+    var vimeo_iframe = $('.r-clip_bg iframe')[0];
+    var player = $f(vimeo_iframe);
+
+    player.addEvent('ready', function() {
+        player.api('setVolume', 0);
+    });
+});

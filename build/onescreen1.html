@@ -8,6 +8,10 @@
 </head>
 <body>
 <div class="b-screen_top">
+    <div id="b-showreel_bg" style=""><div class="r-clip_bg">
+        <iframe frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" src="https://player.vimeo.com/video/176429692?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1" width="150%" height="150%" style="transform: translateX(-17%) translateY(-16%);"></iframe>
+    </div>
+    </div>
     <div class="b-top_line clearfix">
     </div>
     <div class="b-logo_images">
@@ -46,7 +50,8 @@
             <div class="container">
                 <div class="row col-md-12">
                     <form action="POST" name="phoneInput">
-                        <div class="b-input_text_cover m-invalid">
+                        <!--ДОБАВЬТЕ КЛАСС m-invalid к b-input_text_cover при неверной почте-->
+                        <div class="b-input_text_cover">
                             <input type="text" placeholder="ВАШ E-MAIL" name="email">
                             <div class="b-input_hint">Подсказка</div>
                         </div>
@@ -59,6 +64,8 @@
     </div>
     <div id="b-showreel" style=""><a class="e-close"></a><div class="r-clip"></div></div>
 </div>
+
+<script src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
 <script src="js/onescreen1.js"></script>
 <!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
 <!-- Google Analytics counter --><!-- /Google Analytics counter -->
