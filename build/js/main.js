@@ -1,9 +1,10 @@
 $(document).on('ready', function() {
     var burger = document.getElementById("burger-button");
-
+    var cover = document.querySelector(".b-main_cover")
     burger.addEventListener("click", function (e) {
         e.preventDefault();
         burger.classList.toggle("active");
+        cover.classList.toggle("active");
     });
 
     $(".scroll-order").click(function() {

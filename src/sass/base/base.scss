@@ -77,6 +77,21 @@ A:active {
   right: 12px;
 }
 
+.b-main_cover {
+  position: fixed;
+  display: none;
+  z-index: 13;
+  top:0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  background: url("../images/bg-cover.png");
+  background-size: cover;
+}
+
+.b-main_cover.active {
+  display: block;
+}
 
 /* header */
 
@@ -184,6 +199,11 @@ A:active {
   &:active {
     background-color: rgba(11, 211, 255, 0.9);
   }
+}
+
+.b-top_line.active .b-link_top:hover,
+.b-top_line.active .b-link_top:active {
+  background-color: #f4f7ff;
 }
 
 .b-link_top:hover,
@@ -1637,6 +1657,11 @@ A:active {
   /* screen-13 */
 .b-screen-13 {
   padding: 100px 0 140px;
+}
+
+.b-screen-13 .b-form {
+  border: 1px solid grey;
+  padding: 20px;
 }
 
 .b-screen-13 H2 {
