@@ -11,12 +11,43 @@ BUTTON {
   padding: 22px;
   text-transform: uppercase;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
+
+.b-btn span {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: $color-blue;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: width 0.4s, height 0.4s;
+  transition: width 0.4s, height 0.4s;
+  z-index: -1;
+}
+
+.b-btn.m-btn_w100:hover span,
+.b-btn.m-btn_w100:active span {
+  width: 800px;
+  height: 800px;
+}
+
 
 .b-btn:hover,
 .b-btn:active {
   color: $color-white;
-  background-color: $color-blue;
+  outline-width: 0;
+  //background-color: $color-blue;
+}
+
+.b-btn:hover span,
+.b-btn:active span {
+  width: 500px;
+  height: 500px;
 }
 
 .b-btn.m-btn_dark_bg {
@@ -24,10 +55,20 @@ BUTTON {
   box-shadow: 0 0 20px 0 rgba(114, 0, 128, 0.7);
 }
 
+.b-btn.m-btn_dark_bg span,
+.b-btn.m-btn_dark_bg span {
+  background-color: #f4f7ff;
+}
+
+.b-btn.m-btn_dark_bg:hover span,
+.b-btn.m-btn_dark_bg:active span {
+  background-color: #f4f7ff;
+}
+
 .b-btn.m-btn_dark_bg:hover,
 .b-btn.m-btn_dark_bg:active {
   color: $color-blue;
-  background-color: #f4f7ff;
+  //background-color: #f4f7ff;
   border: 1px solid #f4f7ff;
 }
 
@@ -291,3 +332,4 @@ BUTTON {
   background: url("../images/screen-3/slider-right.png");
   background-color: transparent;
 }
+

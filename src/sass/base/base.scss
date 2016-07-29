@@ -87,6 +87,7 @@ A:active {
 
 .b-top_line {
   position: fixed;
+  height: 81px;
   top: 0;
   left: 0;
   right: 0;
@@ -303,6 +304,7 @@ A:active {
 
 .b-burger__button.active + .b-side_menu {
   transform: translateX(0);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
 }
 
 /* screen-1 */
@@ -373,7 +375,8 @@ A:active {
 }
 
 .b-target_list_popup .b-form H2 {
-  text-align: center;
+  text-align: left;
+  line-height: 57px;
 }
 
 .b-popup_content H2 {
@@ -751,7 +754,7 @@ A:active {
 
 .b-screen-4 .row:nth-of-type(odd) .b-skills_number_2 {
   top: -55px;
-  right: -46px;
+  right: -63px;
   letter-spacing: -8px;
 }
 

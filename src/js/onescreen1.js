@@ -3,7 +3,6 @@
 //= ../vendor/bower_components/textillate/jquery.textillate.js
 
 
-
 $(document).ready(function(){
     var animation = {
 
@@ -66,12 +65,28 @@ $(document).ready(function(){
         });
     }
 
+
+
+    $('.b-btn:not(.m-btn_load_more)')
+        .on('mouseenter', function(e) {
+            var parentOffset = $(this).offset(),
+                relX = e.pageX - parentOffset.left,
+                relY = e.pageY - parentOffset.top;
+            $(this).find('span').css({top:relY, left:relX})
+        })
+        .on('mouseout', function(e) {
+            var parentOffset = $(this).offset(),
+                relX = e.pageX - parentOffset.left,
+                relY = e.pageY - parentOffset.top;
+            $(this).find('span').css({top:relY, left:relX})
+        });
+
     $(window).on("resize", function(){
         $(".r-clip, .r-clip_bg").css({width: $(window).width(), height: $(window).height()});
     });
 
     $(".b-btn_play").on("click", function(){
-        $(".r-clip").html('<iframe frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" src="https://player.vimeo.com/video/176429692?title=0&byline=0&portrait=0&autoplay=1" width="150%" height="150%" style="transform: translateX(-17%) translateY(-16%);"></iframe>')
+        $(".r-clip").html('<iframe frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" src="https://player.vimeo.com/video/176744163?title=0&byline=0&portrait=0&autoplay=1" width="100%" height="150%" style="transform: translateX(-0%) translateY(-16%);"></iframe>')
         $(".r-clip").css({width: $(window).width(), height: $(window).height()});
         $("#b-showreel").addClass("m-show")
         return false;

@@ -12,7 +12,9 @@ $(document).on('ready', function() {
         }, 800);
         return false;
     });
-    
+
+    $("input[name='phone']").inputmask("+7 (999) 999-99-99");
+
     $('.b-slick_slider_master').slick({
         dots: true,
         infinite: true,
@@ -152,6 +154,20 @@ $(document).on('ready', function() {
 
 
     });
+
+    $('.b-btn:not(.m-btn_load_more)')
+        .on('mouseenter', function(e) {
+            var parentOffset = $(this).offset(),
+                relX = e.pageX - parentOffset.left,
+                relY = e.pageY - parentOffset.top;
+            $(this).find('span').css({top:relY, left:relX})
+        })
+        .on('mouseout', function(e) {
+            var parentOffset = $(this).offset(),
+                relX = e.pageX - parentOffset.left,
+                relY = e.pageY - parentOffset.top;
+            $(this).find('span').css({top:relY, left:relX})
+        });
 
     /*onscroll animation*/
 

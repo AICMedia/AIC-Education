@@ -398,3 +398,12 @@ A:active {
 form input[type="text"]:focus {
   border-color: $color-blue;
 }
+
+.b-input_text_cover::before {
+  @include pseudo;
+  top: 20px;
+  left: -66px;
+  width: 44px;
+  height: 13px;
+  background: url("../images/onescreen/arrows.png");
+}
