@@ -55,7 +55,7 @@
                             <input type="text" placeholder="ВАШ E-MAIL" name="email">
                             <div class="b-input_hint">Подсказка</div>
                         </div>
-                        <button type="submit" href="" class="b-btn m-btn_white m-btn_dark_bg">Узнать первым <span></span></button>
+                        <button type="submit" href="" data-popup='popup' class="b-btn m-btn_white m-btn_dark_bg s-popup">Узнать первым <span></span></button>
                     </form>
                 </div>
             </div>
@@ -64,9 +64,126 @@
     </div>
     <div id="b-showreel" style=""><a class="e-close"></a><div class="r-clip"></div></div>
 </div>
-
+<style>
+.b-popup{
+    position: fixed;
+    z-index: 900;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+.b-popup.active{
+    display: block;
+}
+.b-popup_content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);  
+    width: 830px;
+    max-width: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 5px rgba(0,0,0,.1);
+    padding:45px 20px 30px 50px;
+    margin:0 auto;
+    opacity: 0;
+}
+.b-popup.active .b-popup_content{
+    opacity: 1;
+}
+.b-popup_title{
+    color: #222;
+    font-size: 38px;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    margin-bottom: 30px;
+}
+.b-popup-txt{
+    font-size: 24px;
+    line-height: 1.55;
+    color: #9fa7b4;
+    font-style: italic;
+    text-align: center;
+    font-family: "Georgia", sans-serif;
+}
+.b-popup_close{
+    background: url(images/close.png) no-repeat;
+    background-position: 0 0;
+    position: absolute;
+    top: -35px;
+    right: -35px;
+    display: block;
+    height: 27px;
+    width: 27px;
+    cursor: pointer;
+    z-index: 10;
+}
+@media(max-width: 991px){
+    .b-popup_content{
+        width: 550px;
+    }
+}
+@media(max-width: 640px){
+    .b-popup_title{
+        font-size: 32;
+    }
+    .b-popup-txt{
+        font-size: 18px;
+    }
+    .b-popup_content{
+        width: 100%;
+        padding:0;
+        top: 0;
+        bottom: 0;
+        left:0;
+        transform:translate(0,0);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .b-popup_content{
+        width: 100%;
+    }
+    .b-popup_close{
+        right: 10px;
+        top: 10px;
+        background-position: 0 bottom;
+    }
+}
+</style>
+<div class="b-popup" id="popup">
+    <div class="b-popup_content">
+        <span class="b-popup_close"></span>
+        <h2 class="b-popup_title">Спасибо!</h2>
+        <p class="b-popup-txt">Ваша заявка отправлена. <br>Мы отправим вам письмо перед стартом курса.</p>
+    </div>   
+</div>
 <script src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
 <script src="js/onescreen1.js"></script>
+<script>
+
+// Для работы скрипта неободимо добавить атрибут data-popup с id попапа и класс s-popup. Например data-popup="popup" 
+// Соответсвенно нужно присвоить тот же индификатор контейнеру попапа.
+
+var openPopup = document.getElementsByClassName('s-popup');
+for (var i=0; i < openPopup.length; i++) {
+    openPopup[i].addEventListener('click', function(e) {
+        e.preventDefault();
+        var popupContainer = this.getAttribute('data-popup');
+        document.getElementById(popupContainer).classList.add('active');
+    });
+}
+var closePopup = document.getElementsByClassName('b-popup_close');
+for (var i=0; i < closePopup.length; i++) {
+    closePopup[i].addEventListener('click', function(e) {
+        this.closest(".b-popup").classList.remove('active');
+    });
+}
+</script>
 <!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
 <!-- Google Analytics counter --><!-- /Google Analytics counter -->
 </body>
