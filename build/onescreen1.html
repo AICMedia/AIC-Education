@@ -55,7 +55,7 @@
                             <input type="text" placeholder="ВАШ E-MAIL" name="email">
                             <div class="b-input_hint">Подсказка</div>
                         </div>
-                        <button type="submit" href="" data-popup='popup' class="b-btn m-btn_white m-btn_dark_bg s-popup">Узнать первым <span></span></button>
+                        <button type="submit" href="" data-popup='#popup' class="b-btn m-btn_white m-btn_dark_bg">Узнать первым <span></span></button>
                     </form>
                 </div>
             </div>
@@ -166,15 +166,14 @@
 <script src="js/onescreen1.js"></script>
 <script>
 
-// Для работы скрипта неободимо добавить атрибут data-popup с id попапа и класс s-popup. Например data-popup="popup" 
-// Соответсвенно нужно присвоить тот же индификатор контейнеру попапа.
+// Для работы скрипта необходимо добавить атрибут data-popup кнопке вызова. Например data-popup="#popup" 
 
-var openPopup = document.getElementsByClassName('s-popup');
+var openPopup = document.querySelectorAll("*[data-popup]");
 for (var i=0; i < openPopup.length; i++) {
     openPopup[i].addEventListener('click', function(e) {
         e.preventDefault();
         var popupContainer = this.getAttribute('data-popup');
-        document.getElementById(popupContainer).classList.add('active');
+        document.querySelector(popupContainer).classList.add('active');
     });
 }
 var closePopup = document.getElementsByClassName('b-popup_close');
